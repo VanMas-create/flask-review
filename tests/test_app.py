@@ -9,3 +9,6 @@ def test_index():
 
 def test_missing_page():
     assert app.test_client().get("/missing").status_code == 404
+
+def test_about():
+    assert app.test_client().get("/about").status_code == 200
