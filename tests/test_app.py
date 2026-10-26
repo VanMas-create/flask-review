@@ -12,3 +12,9 @@ def test_missing_page():
 
 def test_about():
     assert app.test_client().get("/about").status_code == 200
+    
+
+def test_health():
+    response = app.test_client().get("/health")
+    assert response.status_code == 200
+    assert response.get_json() == {"status": "ok"}

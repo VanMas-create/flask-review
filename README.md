@@ -18,6 +18,7 @@ Python 3.15+
     python -m pytest -q
 
 ## Доступные URL
-- `/` — Hello, World!
 
+- `/` — Hello, World!
 - `/about` — текстовое описание проекта
+- `/health` — JSON {"status":"ok"}
