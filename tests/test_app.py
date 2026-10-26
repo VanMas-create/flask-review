@@ -11,4 +11,6 @@ def test_missing_page():
     assert app.test_client().get("/missing").status_code == 404
 
 def test_about():
-    assert app.test_client().get("/about").status_code == 200
+    response = app.test_client().get("/about")
+    assert response.status_code == 200
+    assert response.get_data(as_text=True) == "Это проект для Лабораторной работы"
